@@ -1,7 +1,9 @@
+/*Da un deslizamiento suave cuando se presionan los botones del nav*/
 html {
     scroll-behavior: smooth;
 }
 
+/*Estilos generales del cuerpo*/
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -17,6 +19,7 @@ body {
     
 }
 
+/*Encabezado con imagen de fondo*/
 header {
     background-image: url('../img/header.png');
     background-size: cover; 
@@ -27,6 +30,7 @@ header {
     text-align: center;
 }
 
+/*Contenedor principal que ajusta el conytenido*/
 .container {
     width: 80%;
     margin: auto;
@@ -37,10 +41,12 @@ header {
     background: white;
 } 
 
+/*Flexibilidad para contenido principal*/
 .main-content {
     flex: 2;
 }
 
+/*Barra lateral con fondo gris y sombras*/
 aside {
     flex: 1;
     background: #e0e0e0;
@@ -60,6 +66,7 @@ aside {
   box-sizing: border-box;
 }
 
+/*Estilos generales para los botones*/
 .btn-17 {
   -webkit-tap-highlight-color: transparent;
   background-color: #000;
@@ -77,6 +84,7 @@ aside {
   text-transform: uppercase;
 }
 
+/*Animaciones cuando señala el cursor*/
 .btn-17:disabled {
   cursor: default;
 }
@@ -116,11 +124,13 @@ aside {
   position: relative;
 }
 
+/*Estilo de animacion cuando el boton es presionado*/
 .btn-17:hover .text {
   -webkit-animation: move-up-alternate 0.3s forwards;
   animation: move-up-alternate 0.3s forwards;
 }
 
+/*Animaciones avanzadas para los botones*/
 @-webkit-keyframes move-up-alternate {
   0% {
     transform: translateY(0);
@@ -139,6 +149,7 @@ aside {
   }
 }
 
+/*Regresa a su estado cuando el cursor deja de señalar*/
 @keyframes move-up-alternate {
   0% {
     transform: translateY(0);
@@ -157,6 +168,7 @@ aside {
   }
 }
 
+/*Estilos y colores de los botones*/
 .btn-17:after,
 .btn-17:before {
   --skew: 0.2;
@@ -173,6 +185,7 @@ aside {
   width: 100%;
 }
 
+/*Estilo del boton despues del cursor señalarlo*/
 .btn-17:after {
   --progress: 0%;
   left: calc(50% + 50% * var(--skew));
@@ -188,7 +201,7 @@ aside {
   --progress: -102%;
 }
 
-
+/*Barra de navegacion*/
 nav {
     background-color: #ccc;
     padding: 20px;
@@ -197,6 +210,7 @@ nav {
     width: 100%;
 }
 
+/*Estilo de lista de navegacion*/
 ul {
     list-style: none;
     padding: 0;
@@ -206,6 +220,7 @@ ul {
     text-align: center;
 }
 
+/*Estilos de los enlaces del menu*/
 nav ul li a {
     text-decoration: none;
     display: inline-block;
@@ -234,6 +249,7 @@ nav ul {
     align-items: center;
 }
 
+/*Sección "Sobre mí" con alineación central y sombra*/
 .sobre_mi {
     display: flex;
     flex-direction: column;
@@ -248,12 +264,14 @@ nav ul {
     text-align: center;
 }
 
+/*Orden y alineacion del contenido*/
 .sobre_mi .contenido {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+/*Tamaño y diseño de imagen*/
 .sobre_mi img {
     width: 250px;
     height: auto;
@@ -261,6 +279,7 @@ nav ul {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/*Sección de experiencia con diseño similar*/
 .experiencia {
     display: flex;
     flex-direction: column;
@@ -281,6 +300,7 @@ nav ul {
     gap: 20px;
 }
 
+/*Mismo diseño para logros*/
 .logros {
     display: flex;
     flex-direction: column;
@@ -295,21 +315,8 @@ nav ul {
     text-align: center;
 }
 
+/*Diseño del bloque de contacto*/
 .contacto {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 10px;
-    text-align: center;
-}
-
-.social-login-icons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -337,7 +344,7 @@ nav ul {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
 }
 
-  
+  /*Campo de entrada en la barra de busqueda*/
 .input {
     width: 100%; /* Ocupa todo el espacio disponible */
     max-width: 95%; /* Se ajusta al borde */
@@ -353,8 +360,7 @@ nav ul {
     font-size: 13.4px;
 }
 
-  
-
+/*Estilos del pie de pagina*/
 footer {
     text-align: center;
     padding: 10px;
