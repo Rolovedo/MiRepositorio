@@ -9,6 +9,7 @@
     --link-hover: rgb(24, 94, 82);
   }
   
+  /*Posicionamiento y diseño del switch*/
   .switch-label {
     position: absolute;
     width: 100%;
@@ -19,11 +20,13 @@
     border: 3px solid var(--dark);
   }
   
+  /*Posicion del contenido*/
   .checkbox {
     position: absolute;
     display: none;
   }
   
+  /*Tamaño del movimiendo al hacer clic*/
   .slider {
     position: absolute;
     width: 100%;
@@ -33,10 +36,12 @@
     transition: 0.3s;
   }
   
+  /*Color de fondo para demostrar el cambio*/
   .checkbox:checked ~ .slider {
     background-color: var(--light);
   }
   
+  /*Slider en posicion predeterminada y su diseño*/
   .slider::before {
     content: "";
     position: absolute;
@@ -52,6 +57,7 @@
     transition: 0.3s;
   }
   
+  /*Reiteracion del slider */
   .checkbox:checked ~ .slider::before {
     -webkit-transform: translateX(50px);
     -ms-transform: translateX(50px);
