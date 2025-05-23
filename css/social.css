@@ -1,0 +1,125 @@
+/* Estilos principales para la estructura de las tarjetas */
+
+/* Contenedor principal que organiza los elementos en una columna con separación */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+/* Contenedor superior que alinea elementos en fila con espacio entre ellos */
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+/* Contenedor inferior que también alinea elementos en fila con espacio entre ellos */
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+/* Estilos base para las tarjetas */
+.card1, .card2, .card3, .card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, 
+              rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+/* Cada tarjeta tiene un borde redondeado en una esquina específica para un diseño único */
+
+/* Tarjeta 1: Instagram (borde redondeado en la parte superior izquierda) */
+.card1 {
+  border-radius: 90px 5px 5px 5px;
+}
+
+/* Estilo del icono de Instagram */
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+/* Tarjeta 2: Facebook (borde redondeado en la parte superior derecha) */
+.card2 {
+  border-radius: 5px 90px 5px 5px;
+}
+
+/* Estilo del icono de Facebook */
+.facebook {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  fill: #03A9F4;
+}
+
+/* Tarjeta 3: GitHub (borde redondeado en la parte inferior izquierda) */
+.card3 {
+  border-radius: 5px 5px 5px 90px;
+}
+
+/* Estilo del icono de GitHub */
+.github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+/* Tarjeta 4: TikTok (borde redondeado en la parte inferior derecha) */
+.card4 {
+  border-radius: 5px 5px 90px 5px;
+}
+
+/* Estilo del icono de TikTok */
+.tiktok {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+/* Estilos de interacción al pasar el cursor por encima (hover) */
+
+/* Tarjeta de Instagram: Cambia de color de fondo y el icono a blanco */
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+.card1:hover .instagram {
+  fill: white;
+}
+
+/* Tarjeta de Facebook: Cambia de color de fondo y el icono a blanco */
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #1877F2;
+}
+.card2:hover .facebook {
+  fill: white;
+}
+
+/* Tarjeta de GitHub: Cambia de color de fondo a negro y el icono a blanco */
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+.card3:hover .github {
+  fill: white;
+}
+
+/* Tarjeta de TikTok: Cambia de color de fondo y el icono a blanco */
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #FE2C55;
+}
+.card4:hover .tiktok {
+  fill: white;
+}

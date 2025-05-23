@@ -1,0 +1,107 @@
+/* Media queries para hacer la página responsive */
+/* Para tabletas (ancho menor a 992px) */
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 20px;
+    }
+    
+    .container {
+        width: 90%;
+    }
+    
+    .sobre_mi .contenido,
+    .experiencia .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sobre_mi img {
+        width: 200px;
+    }
+    
+    .btn-17 {
+        padding: 0.6rem 2rem;
+    }
+}
+
+/* Para móviles (ancho menor a 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .container {
+        width: 95%;
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-content {
+        order: 2;
+    }
+    
+    aside {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    .contacto {
+        flex-direction: column;
+    }
+    
+    .social-login-icons {
+        width: 100%;
+    }
+    
+    .btn-17 {
+        width: 80%;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+/* Para móviles pequeños (ancho menor a 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    
+    header {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .sobre_mi,
+    .experiencia,
+    .logros,
+    .contacto {
+        padding: 15px;
+        margin: 5px 0;
+    }
+    
+    .sobre_mi img {
+        width: 150px;
+    }
+    
+    .InputContainer {
+        height: 40px;
+    }
+    
+    .input {
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    /* Ajusta el tamaño de los botones en móviles pequeños */
+    .btn-17 {
+        font-size: 90%;
+        padding: 0.4rem 1.2rem;
+    }
+}
