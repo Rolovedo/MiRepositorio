@@ -18,3 +18,18 @@ themeToggle.addEventListener('change', function() {
         localStorage.setItem('theme', 'light');
     }
 });
+
+// Cargar tema guardado al iniciar
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    const lightRadio = document.getElementById('theme-light');
+    const darkRadio = document.getElementById('theme-dark');
+    
+    if (savedTheme === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        darkRadio.checked = true;
+    } else {
+        document.body.removeAttribute('data-theme');
+        lightRadio.checked = true;
+    }
+});

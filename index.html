@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/animacion.css">
     <!--boton de tiktok implementado-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <title>Mi Portafolio</title>
     <link rel="icon" href="./img/portafolio.png" type="img/x-icon">
 
@@ -36,10 +37,21 @@
     <section class="container">
         <!-- alternar tema-->
         <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-            <label class="p-inputswitch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="p-inputswitch-slider"></span>
-            </label>
+            <form class="p-selectbutton">
+                <input type="radio" id="theme-light" name="theme" value="light" checked 
+                    onchange="document.body.removeAttribute('data-theme'); localStorage.setItem('theme', 'light');">
+                <label for="theme-light">
+                    <span class="theme-icon sun-icon"></span>
+                    Claro
+                </label>
+                
+                <input type="radio" id="theme-dark" name="theme" value="dark" 
+                    onchange="document.body.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark');">
+                <label for="theme-dark">
+                    <span class="theme-icon moon-icon"></span>
+                    Oscuro
+                </label>
+            </form>
         </div>
 
         <div class="main-content">
