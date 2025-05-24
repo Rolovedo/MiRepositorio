@@ -1,370 +1,172 @@
-/*Da un deslizamiento suave cuando se presionan los botones del nav*/
+/* variables de PrimeNG */
+:root {
+    --primary-color: #3B82F6;
+    --primary-color-text: #ffffff;
+    --surface-0: #ffffff;
+    --surface-50: #f8fafc;
+    --surface-100: #f1f5f9;
+    --surface-200: #e2e8f0;
+    --surface-300: #cbd5e1;
+    --surface-400: #94a3b8;
+    --surface-500: #64748b;
+    --surface-600: #475569;
+    --surface-700: #334155;
+    --surface-800: #1e293b;
+    --surface-900: #0f172a;
+    --text-color: #334155;
+    --text-color-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --border-radius: 6px;
+    --focus-ring: 0 0 0 0.2rem #bfdbfe;
+}
+
+/* scroll lento */
 html {
     scroll-behavior: smooth;
 }
 
-/*Estilos generales del cuerpo*/
+/* estilos del body */
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 25px;
-    /*Imagen de fondo*/
-    background-image: url('../img/fondo.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    overflow-x: hidden; /* Oculta el scroll horizontal */
-    max-width: 100vw; /* Evita que los elementos se expandan más allá del ancho de la pantalla */
-    
+    font-size: 16px;
+    background: linear-gradient(135deg, var(--surface-50) 0%, var(--surface-100) 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    min-height: 100vh;
 }
 
-/*Encabezado con imagen de fondo*/
+/* Header */
 header {
-    background-image: url('../img/header.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    color: white;
-    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1d4ed8 100%);
+    color: var(--primary-color-text);
+    padding: 2rem;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/*Contenedor principal que ajusta el conytenido*/
-.container {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    background: white;
-} 
-
-/*Flexibilidad para contenido principal*/
-.main-content {
-    flex: 2;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-/*Barra lateral con fondo gris y sombras*/
-aside {
-    flex: 1;
-    background: #e0e0e0;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/*Botones del nav*/
-.btn-17,
-.btn-17 *,
-.btn-17 :after,
-.btn-17 :before,
-.btn-17:after,
-.btn-17:before {
-  border: 0 solid;
-  box-sizing: border-box;
-}
-
-/*Estilos generales para los botones*/
-.btn-17 {
-  -webkit-tap-highlight-color: transparent;
-  background-color: #000;
-  background-image: none;
-  color: #fff;
-  cursor: pointer;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 100%;
-  font-weight: 900;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-/*Animaciones cuando señala el cursor*/
-.btn-17:disabled {
-  cursor: default;
-}
-
-.btn-17:-moz-focusring {
-  outline: auto;
-}
-
-.btn-17 svg {
-  display: block;
-}
-
-.btn-17 [hidden] {
-  display: none;
-}
-
-.btn-17 {
-  border-radius: 99rem;
-  border-width: 2px;
-  padding: 0.8rem 3rem;
-  z-index: 0;
-}
-
-.btn-17,
-.btn-17 .text-container {
-  overflow: hidden;
-  position: relative;
-}
-
-.btn-17 .text-container {
-  display: block;
-  mix-blend-mode: difference;
-}
-
-.btn-17 .text {
-  display: block;
-  position: relative;
-}
-
-/*Estilo de animacion cuando el boton es presionado*/
-.btn-17:hover .text {
-  -webkit-animation: move-up-alternate 0.3s forwards;
-  animation: move-up-alternate 0.3s forwards;
-}
-
-/*Animaciones avanzadas para los botones*/
-@-webkit-keyframes move-up-alternate {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(80%);
-  }
-
-  51% {
-    transform: translateY(-80%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-/*Regresa a su estado cuando el cursor deja de señalar*/
-@keyframes move-up-alternate {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(80%);
-  }
-
-  51% {
-    transform: translateY(-80%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-/*Estilos y colores de los botones*/
-.btn-17:after,
-.btn-17:before {
-  --skew: 0.2;
-  background: #fff;
-  content: "";
-  display: block;
-  height: 102%;
-  left: calc(-50% - 50% * var(--skew));
-  pointer-events: none;
-  position: absolute;
-  top: -104%;
-  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
-  transition: transform 0.2s ease;
-  width: 100%;
-}
-
-/*Estilo del boton despues del cursor señalarlo*/
-.btn-17:after {
-  --progress: 0%;
-  left: calc(50% + 50% * var(--skew));
-  top: 102%;
-  z-index: -1;
-}
-
-.btn-17:hover:before {
-  --progress: 100%;
-}
-
-.btn-17:hover:after {
-  --progress: -102%;
-}
-
-/*Barra de navegacion*/
+/* navegacion */
 nav {
-    background-color: #ccc;
-    padding: 20px;
+    background: var(--surface-0);
+    padding: 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--border-color);
 }
 
-/*Estilo de lista de navegacion*/
-ul {
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 30px;
-    text-align: center;
+    gap: 1rem;
+    align-items: center;
 }
 
-/*Estilos de los enlaces del menu*/
-nav ul li a {
-    text-decoration: none;
-    display: inline-block;
-    margin: 0;
+/* imagen de perfil*/
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    margin-bottom: 1rem;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* lista */
+.achievement-list {
+    list-style: none;
     padding: 0;
 }
 
-nav a {
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-    transition: none;
-    font-weight: normal;
-}
-
-nav a:hover {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-nav ul li a button {
-    width: 100%;
-}
-
-nav ul {
-    align-items: center;
-}
-
-/*Sección "Sobre mí" con alineación central y sombra*/
-.sobre_mi {
+.achievement-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 10px;
-    text-align: center;
+    align-items: flex-start;
+    gap: 0.75rem;
 }
 
-/*Orden y alineacion del contenido*/
-.sobre_mi .contenido {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/*Tamaño y diseño de imagen*/
-.sobre_mi img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/*Sección de experiencia con diseño similar*/
-.experiencia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 10px;
-    text-align: center;
-}
-
-.experiencia .contenido {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/*Mismo diseño para logros*/
-.logros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 10px;
-    text-align: center;
-}
-
-/*Diseño del bloque de contacto*/
-.contacto {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 10px;
-    text-align: center;
-}
-
-/*Diseño de la barra de busqueda*/
-.InputContainer {
-    width: 100%; /* Hace que use todo el ancho disponible */
-    height: 50px;
+.achievement-list li:before {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: bold;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
-    border-radius: 30px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+    font-size: 0.8rem;
 }
 
-  /*Campo de entrada en la barra de busqueda*/
-.input {
-    width: 100%; /* Ocupa todo el espacio disponible */
-    max-width: 95%; /* Se ajusta al borde */
-    height: 40px;
-    border: none;
-    outline: none;
-    caret-color: rgb(255, 81, 0);
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    padding-left: 15px;
-    letter-spacing: 0.8px;
-    color: rgb(19, 19, 19);
-    font-size: 13.4px;
+/* Sidebar */
+aside {
+    flex: 1;
+    min-width: 300px;
 }
 
-/*Estilos del pie de pagina*/
+/* carta de habilidades */
+.skills-card {
+    background: var(--surface-0);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.skills-card h3 {
+    margin: 0 0 1rem 0;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-color-secondary);
+}
+
+.skills-list li i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
-    margin-top: 20px;
+    padding: 2rem;
+    background: var(--surface-100);
+    color: var(--text-color-secondary);
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
 }

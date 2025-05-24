@@ -1,0 +1,193 @@
+/* primeng estilos de boton */
+.p-button {
+    color: var(--primary-color);
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    transition: all 0.2s;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.p-button:hover {
+    background: var(--primary-color);
+    color: var(--primary-color-text);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.p-button:focus {
+    outline: 0 none;
+    box-shadow: var(--focus-ring);
+}
+
+/* contenedor */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* contenido principal */
+.main-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* primeng estilos de carta */
+.p-card {
+    background: var(--surface-0);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.p-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.p-card .p-card-header {
+    padding: 1.5rem 1.5rem 0;
+}
+
+.p-card .p-card-body {
+    padding: 1.5rem;
+}
+
+.p-card .p-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--text-color);
+}
+
+.p-card .p-card-content {
+    padding: 0;
+    margin: 0;
+    color: var(--text-color-secondary);
+}
+
+/* switch nocturno primeng*/
+.p-inputswitch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-bottom: 2rem;
+}
+
+.p-inputswitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.p-inputswitch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--surface-400);
+    transition: .3s;
+    border-radius: 30px;
+}
+
+.p-inputswitch-slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input:checked + .p-inputswitch-slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .p-inputswitch-slider:before {
+    transform: translateX(30px);
+}
+
+/* barra de busqueda primeng */
+.p-inputtext {
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--surface-0);
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    border-radius: var(--border-radius);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.p-inputtext:enabled:focus {
+    outline: 0 none;
+    border-color: var(--primary-color);
+    box-shadow: var(--focus-ring);
+}
+
+.p-inputtext::placeholder {
+    color: var(--text-color-secondary);
+}
+
+/* Botones de redes sociales */
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.social-button:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.social-button.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-button.facebook { background: #1877f2; }
+.social-button.github { background: #333; }
+.social-button.tiktok { background: linear-gradient(45deg, #ff0050, #00f2ea); }
+
+.social-button i {
+    font-size: 1.5rem;
+}
