@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/primeng.css">
     <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/animacion.css">
     <!--boton de tiktok implementado-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Mi Portafolio</title>
@@ -43,7 +44,10 @@
 
         <div class="main-content">
             <!-- seccion sobre mi -->
-            <article id="principal" class="p-card">
+            <article id="principal" class="p-card"
+                data-animate-on-scroll 
+                data-enter-class="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-500"
+                data-leave-class="animate-leave fade-out-0">
                 <div class="p-card-header">
                     <h2 class="p-card-title">Sobre Mí</h2>
                 </div>
@@ -61,7 +65,10 @@
             </article>
 
             <!-- seccion de experiencia -->
-            <article class="p-card">
+            <article class="p-card"
+                data-animate-on-scroll 
+                data-enter-class="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-500"
+                data-leave-class="animate-leave fade-out-0">
                 <div class="p-card-header">
                     <h2 class="p-card-title">Experiencia</h2>
                 </div>
@@ -75,7 +82,10 @@
             </article>
 
             <!-- seccion de logros -->
-            <article id="logros" class="p-card">
+            <article id="logros" class="p-card"
+                data-animate-on-scroll 
+                data-enter-class="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-500"
+                data-leave-class="animate-leave fade-out-0">
                 <div class="p-card-header">
                     <h2 class="p-card-title">Logros</h2>
                 </div>
@@ -91,7 +101,10 @@
             </article>
 
             <!-- seccion de contactos -->
-            <article id="contacto" class="p-card">
+            <article id="contacto" class="p-card"
+                data-animate-on-scroll 
+                data-enter-class="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-500"
+                data-leave-class="animate-leave fade-out-0">
                 <div class="p-card-header">
                     <h2 class="p-card-title">Contacto</h2>
                 </div>
@@ -145,5 +158,6 @@
 
     <script src="./js/busqueda.js"></script>
     <script src="./js/dark_theme.js"></script>
+    <script src="./js/animacion_scroll.js"></script>
 </body>
 </html>

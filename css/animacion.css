@@ -1,0 +1,127 @@
+/* Clases base para animaciones */
+.animate-initial {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animaciones de entrada */
+.animate-enter {
+    animation-fill-mode: both;
+}
+
+.fade-in-10 {
+    opacity: 1 !important;
+}
+
+.slide-in-from-l-8 {
+    transform: translateX(0) !important;
+}
+
+.slide-in-from-r-8 {
+    transform: translateX(0) !important;
+}
+
+.slide-in-from-t-20 {
+    transform: translateY(0) !important;
+}
+
+.slide-in-from-b-20 {
+    transform: translateY(0) !important;
+}
+
+.slide-in-from-t-12 {
+    transform: translateY(0) !important;
+}
+
+.slide-in-from-t-16 {
+    transform: translateY(0) !important;
+}
+
+.zoom-in-50 {
+    transform: scale(1) !important;
+}
+
+.zoom-in-75 {
+    transform: scale(1) !important;
+}
+
+.spin-in-45 {
+    transform: rotate(0deg) !important;
+}
+
+.spin-in-neg-45 {
+    transform: rotate(0deg) !important;
+}
+
+/* Duraciones de animación */
+.animate-duration-1000 {
+    animation-duration: 1000ms;
+    transition: all 1000ms ease-out;
+}
+
+/* Estados iniciales específicos */
+[data-animate-on-scroll].animate-initial {
+    opacity: 0;
+    transition: all 1000ms ease-out;
+}
+
+/* Slide desde la izquierda */
+[data-enter-class*="slide-in-from-l-8"].animate-initial {
+    transform: translateX(-32px);
+}
+
+/* Slide desde la derecha */
+[data-enter-class*="slide-in-from-r-8"].animate-initial {
+    transform: translateX(32px);
+}
+
+/* Slide desde arriba */
+[data-enter-class*="slide-in-from-t-20"].animate-initial {
+    transform: translateY(-80px);
+}
+
+[data-enter-class*="slide-in-from-t-12"].animate-initial {
+    transform: translateY(-48px);
+}
+
+[data-enter-class*="slide-in-from-t-16"].animate-initial {
+    transform: translateY(-64px);
+}
+
+/* Slide desde abajo */
+[data-enter-class*="slide-in-from-b-20"].animate-initial {
+    transform: translateY(80px);
+}
+
+/* Zoom */
+[data-enter-class*="zoom-in-50"].animate-initial {
+    transform: scale(0.5);
+}
+
+[data-enter-class*="zoom-in-75"].animate-initial {
+    transform: scale(0.75);
+}
+
+/* Rotación negativa */
+[data-enter-class*="spin-in-neg-45"].animate-initial {
+    transform: rotate(-45deg);
+}
+
+/* Animaciones de salida */
+.animate-leave {
+    animation-fill-mode: both;
+}
+
+.fade-out-0 {
+    opacity: 0 !important;
+    transition: all 300ms ease-out;
+}
+
+/* Clases adicionales para mejorar las animaciones */
+.card-animated {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stagger-animation:nth-child(1) { animation-delay: 0ms; }
+.stagger-animation:nth-child(2) { animation-delay: 200ms; }
+.stagger-animation:nth-child(3) { animation-delay: 400ms; }
